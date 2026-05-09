@@ -1,0 +1,8 @@
+{
+  "name": "radixwatch",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
