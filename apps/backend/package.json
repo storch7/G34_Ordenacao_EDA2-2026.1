@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "test": "bun test"
   },
   "dependencies": {
-    "elysia": "^1.0.0",
-    "@radixwatch/core": "workspace:*"
+    "@elysiajs/cors": "^1.4.2",
+    "@radixwatch/core": "workspace:*",
+    "elysia": "^1.0.0"
   }
 }
