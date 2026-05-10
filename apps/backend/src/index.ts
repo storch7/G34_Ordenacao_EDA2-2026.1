@@ -1,7 +1,17 @@
 import { Elysia } from "elysia";
+import { cors } from "@elysiajs/cors";
 import { convertIpToUint32 } from "@radixwatch/core";
+import { createAnalyzeRoute } from "./routes/analyze";
 
 const app = new Elysia()
+  .use(
+    cors({
+      origin: "http://localhost:5173",
+      methods: ["GET", "POST"],
+      allowedHeaders: ["Content-Type"],
+    })
+  )
+  .use(createAnalyzeRoute())
   .get("/", () => "RadixWatch API is running!")
   .get("/test", () => {
     const ip = "192.168.1.100";
@@ -9,7 +19,7 @@ const app = new Elysia()
     return {
       message: "Testing shared core package",
       ip,
-      uint32
+      uint32,
     };
   })
   .listen(3000);
