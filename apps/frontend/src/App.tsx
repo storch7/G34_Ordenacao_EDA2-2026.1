@@ -1,11 +1,15 @@
+import { Header } from './components/Header'
 import './index.css'
+import './App.css'
 
 function App() {
   return (
-    <>
-      <h1>RadixWatch</h1>
-      <p>Performance Logs Analysis</p>
-    </>
+    <div className="app-container">
+      <Header />
+      <main className="main-content">
+        {/* Placeholder for future components */}
+      </main>
+    </div>
   )
 }
 
