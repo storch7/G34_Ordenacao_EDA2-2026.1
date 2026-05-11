@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Header } from './components/Header'
 import { FileUpload } from './components/FileUpload'
+import { ResultsDashboard } from './components/ResultsDashboard'
 import { uploadAndAnalyzeLog, AnalyzeResult } from './services/api'
 import './index.css'
 import './App.css'
@@ -42,14 +43,8 @@ function App() {
           </div>
         )}
 
-        {/* Placeholder for results */}
-        {result && (
-          <div className="results-placeholder glass-panel">
-            <h2>Analysis Complete</h2>
-            <p>Total Requests: {result.totalRequests.toLocaleString()}</p>
-            <p>Processing Time: {result.processingTimeMs.toFixed(2)} ms</p>
-          </div>
-        )}
+        {/* Results Dashboard */}
+        {result && <ResultsDashboard result={result} />}
       </main>
     </div>
   )
