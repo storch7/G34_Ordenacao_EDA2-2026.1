@@ -1,0 +1,127 @@
+.upload-container {
+  width: 100%;
+  margin-bottom: 2rem;
+  animation: fadeIn 0.4s ease forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.upload-zone {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 2rem;
+  border: 2px dashed var(--glass-border);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  background: rgba(30, 30, 40, 0.2);
+}
+
+.upload-zone:hover:not(.disabled) {
+  border-color: var(--accent-primary);
+  background: rgba(109, 40, 217, 0.05);
+}
+
+.upload-zone.dragging {
+  border-color: var(--accent-secondary);
+  background: rgba(79, 70, 229, 0.1);
+  transform: scale(1.02);
+}
+
+.upload-zone.disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.upload-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  pointer-events: none;
+}
+
+.upload-icon {
+  color: var(--accent-secondary);
+  transition: transform var(--transition-normal);
+}
+
+.upload-zone:hover:not(.disabled) .upload-icon {
+  transform: translateY(-5px);
+  color: var(--accent-primary);
+}
+
+.upload-prompt h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+.upload-prompt p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.file-selected {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--glass-border);
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.file-icon {
+  color: var(--accent-secondary);
+}
+
+.file-details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.file-name {
+  font-weight: 500;
+  color: var(--text-primary);
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-size {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.clear-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.clear-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
