@@ -11,3 +11,12 @@
   gap: 2rem;
   animation: fadeIn var(--transition-normal);
 }
+
+.error-message {
+  padding: 1.5rem;
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+  text-align: center;
+  border-radius: var(--radius-md);
+}
