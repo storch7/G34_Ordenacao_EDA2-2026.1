@@ -2,6 +2,8 @@
 
 RadixWatch é um projeto acadêmico fullstack focado em análise de logs massivos de servidores (Apache/Nginx) com altíssima performance, utilizando agrupamentos rápidos com algoritmos de baixo nível (Radix Sort e Typed Arrays).
 
+> Link para o vídeo de apresentação: https://youtu.be/xjH9fZNzaOI
+
 ## Arquitetura do Monorepo
 
 - `apps/backend`: Motor da API construído com [Bun](https://bun.sh/) e [Elysia](https://elysiajs.com/).
